@@ -1,13 +1,17 @@
 ---
 title: "Lab 1: Introduction to Quarto"
-author: "Ainsley Forster!"
+author: "Ainsley Forster"
 date: "January 12, 2025"
 format: html
+theme: minty
+monobackgroundcolor: aquamarine
 editor: source
 embed-resources: true
 execute:
   echo: true
   error: true
+code-fold: true
+toc: true
 ---
 
 # Part Two: Exploring Quarto Documents
