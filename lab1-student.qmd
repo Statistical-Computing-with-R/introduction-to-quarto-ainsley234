@@ -24,7 +24,7 @@ provides descriptions on the options you can specify in a document's execution.
 options, (1) your source code is always output on the page, and (2) your
 document will render even if there are errors.
 
-## Dataset: The Effect of Vitamin C on Tooth Growth in Guinea Pigs
+## Tooth Growth Dataset
 
 ```{r}
 #| eval: false
@@ -67,8 +67,8 @@ section (e.g., Tooth Growth Dataset).
 #| layout-ncol: 2
 #| fig-align: center
 #| fig-cap:
-#|  - "Boxplot of the effect of suppliment type on length of teeth"
-#|  - "Boxplot of the effect of suppliment dose on length of teeth"
+#|  - "Effect of suppliment type on length of teeth"
+#|  - "Effect of suppliment dose on length of teeth"
 
 
 library(tidyverse)
@@ -98,4 +98,17 @@ should be **center aligned**.
 
 **Question 9** -- Specify a **figure caption** for the boxplots (using a
 code-chunk option).
+
+## Tooth Growth T-Test
+
+```{r}
+
+t.test(len~supp, data=ToothGrowth, var.equal=FALSE, alternative="two.sided")
+```
+
+**Question 12** -- Create a numbered list:
+
+1. Conclusion: Given the p-value of about 0.06063 we fail to reject the null hypothesis at the 5% significance level, meaning that there is not a significant difference in the means between group OJ and group VC.
+
+2. Based on this analysis, we can be 95% confident that the true difference in means is between -0.1710156 and 7.5710156 which supports our previous conclusion. 
 
